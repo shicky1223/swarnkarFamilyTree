@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index</title>
+</head>
+<body>
+    <h1>Family Tree</h1>
+    <ul>
+        {% for person in persons %}
+        <li>{{ person.first_name }} {{ person.last_name }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('profile') }}">Profile</a>
+    <a href="{{ url_for('logout') }}">Logout</a>
+</body>
+</html>
